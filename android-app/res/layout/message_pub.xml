@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/message_pub_receiver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autoLink="web"
+        android:background="@drawable/line_blue"
+        android:padding="5.0dip"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2.0dip"
+        android:layout_marginTop="6.0dip"
+        android:text="* 留言内容(最多250个字)"
+        android:textColor="@color/head_text"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/message_pub_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext_selector"
+        android:autoLink="web"
+        android:gravity="top"
+        android:hint="输入留言"
+        android:lines="5" />
+
+</LinearLayout>

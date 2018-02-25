@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <net.oschina.app.widget.LinkView
+        android:id="@+id/comment_pub_quote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dip"
+        android:autoLink="web|email"
+        android:background="@drawable/review_bg_blue"
+        android:maxLines="5"
+        android:padding="5.0dip"
+        android:textColor="@color/black"
+        android:textColorLink="@color/listitem_blue"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/comment_pub_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autoLink="web"
+        android:gravity="top"
+        android:hint="@string/comment_pub_content_hint"
+        android:background="@drawable/edittext_selector"
+        android:lines="5" />
+
+    <CheckBox
+        android:id="@+id/comment_pub_zone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|center"
+        android:layout_marginLeft="3.0dip"
+        android:text="@string/comment_pub_forward"
+        android:textColor="@color/black"
+        android:visibility="gone" />
+
+</LinearLayout>

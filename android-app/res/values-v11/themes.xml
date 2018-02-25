@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <style name="Theme.AppCompat.OSChina" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/menuback_green</item>
+        <!-- <item name="android:actionBarTabStyle">@style/Widget.ActionBar.TabView.light</item> -->
+        <item name="android:actionBarTabBarStyle">@style/Widget.ActionBar.Tab.light</item>
+        <item name="android:actionBarTabTextStyle">@style/Widget.ActionBar.TabText</item>
+    </style>
+    
+    <style name="Theme.AppCompat.OSChina.Light" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/menuback_green</item>
+        <!--<item name="android:actionBarTabStyle">@style/Widget.AppCompat.Light.Base.ActionBar.TabView</item>-->
+        <!--<item name="android:actionBarTabBarStyle">@style/Widget.AppCompat.Light.Base.ActionBar.TabBar</item>-->
+        <!--<item name="android:actionBarTabTextStyle">@style/Widget.AppCompat.Light.Base.ActionBar.TabText</item>-->
+    </style>
+    
+    <style name="Widget.ActionBar.TabView.light" parent="@style/Widget.AppCompat.ActionBar.TabView">
+        
+    </style>
+    
+    <style name="Widget.ActionBar.Tab.light" parent="@style/Widget.AppCompat.ActionBar.TabBar">
+        <item name="android:background">@drawable/actionbar_tabs_style</item>
+        <item name="android:divider">#000000</item>
+    </style>
+    
+    <style name="Widget.ActionBar.TabText" parent="@style/Widget.AppCompat.ActionBar.TabText">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+    
+    <style name="menuback_green" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@drawable/actionbar_background_oschina</item>
+    </style>
+    
+    <style name="Theme.AppCompat.ScreenShotShare" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/menuback_blue</item>
+    </style>
+    
+    <style name="menuback_blue" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@drawable/actionbar_backgroidn_share</item>
+    </style>
+</resources>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/main_activity_drawer"
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/white" >
+
+        <ImageView
+            android:id="@+id/user_info_userface"
+            android:layout_width="70dip"
+            android:layout_height="70dip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/widget_dface_border"
+            android:clickable="true"
+            android:padding="3.0dip"
+            android:scaleType="fitCenter"
+            android:src="@drawable/widget_dface" />
+
+        <TextView
+            android:id="@+id/user_info_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/user_info_userface"
+            android:layout_marginTop="10.0dip"
+            android:text="zxtegd"
+            android:textColor="@color/author_text"
+            android:textSize="@dimen/text_size_18" />
+        
+        
+        <TextView 
+            android:id="@+id/watch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/user_info_username"
+            android:text="关注"
+            android:textSize="@dimen/text_size_14"/>
+        
+        <TextView 
+            android:id="@+id/watch_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_alignLeft="@id/watch"
+            android:layout_alignRight="@id/watch"
+            android:layout_below="@id/watch"
+            android:gravity="center"
+            android:text="10"/>
+        
+        <TextView 
+            android:id="@+id/Favorites"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/watch"
+            android:layout_alignBottom="@id/watch"
+            android:layout_marginRight="20dp"
+            android:text="收藏"
+            android:textSize="@dimen/text_size_14"/>
+        
+        <TextView 
+            android:id="@+id/Favorites_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_alignLeft="@id/Favorites"
+            android:layout_alignRight="@id/Favorites"
+            android:layout_below="@id/Favorites"
+            android:gravity="center"
+            android:text="10"/>
+
+        <TextView 
+            android:id="@+id/fans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/watch"
+            android:layout_alignBottom="@id/watch"
+            android:layout_marginLeft="20dp"
+            android:text="粉丝"
+            android:textSize="@dimen/text_size_14"/>
+        
+        <TextView 
+            android:id="@+id/fans_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_alignLeft="@id/fans"
+            android:layout_alignRight="@id/fans"
+            android:layout_below="@id/fans"
+            android:gravity="center"
+            android:text="10"/>
+        
+    </RelativeLayout>
+
+</LinearLayout>

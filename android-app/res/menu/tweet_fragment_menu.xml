@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+    <item 
+        android:id="@+id/tweet_fragment_put"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:showAsAction="always|always"
+        android:title="@string/question_fragment_put_title"
+        android:icon="@drawable/ic_action_question_add" />
+
+</menu>

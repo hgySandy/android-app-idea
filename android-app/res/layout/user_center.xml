@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  	android:layout_width="fill_parent"
+  	android:layout_height="fill_parent"
+  	android:orientation="vertical"
+	android:background="@color/white">
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:layout_weight="1">
+	
+		<net.oschina.app.widget.PullToRefreshListView
+		  	android:id="@+id/user_center_activelist"
+		    style="@style/widget_listview"/>
+		
+		<net.oschina.app.widget.PullToRefreshListView
+		  	android:id="@+id/user_center_bloglist"
+		    style="@style/widget_listview"
+			android:visibility="gone"/>
+		
+	</LinearLayout>
+   	
+   	<include layout="@layout/user_center_footer"/>
+   	
+</LinearLayout>

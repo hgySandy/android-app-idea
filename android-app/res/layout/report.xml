@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="链接地址："
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_14" />
+
+    <TextView
+        android:id="@+id/report_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+        android:text="举报链接"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_13" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:text="举报原因："
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_15" />
+
+    <Spinner
+        android:id="@+id/report_reason"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/report_reason" />
+
+    <EditText
+        android:id="@+id/report_other_reson"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext_selector"
+        android:autoLink="web|email"
+        android:gravity="top"
+        android:hint="最多250个字"
+        android:textSize="@dimen/text_size_15" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="tips:请勿因个人喜好而举报"
+        android:textColor="@color/listitem_greenyellow"
+        android:textSize="@dimen/text_size_12" />
+
+</LinearLayout>

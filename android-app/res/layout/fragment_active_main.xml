@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:paddingTop="4dp"
+        android:layout_height="32dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/active_lastest"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="最新动态"
+            android:textColor="#AD0000" />
+
+        <TextView
+            android:layout_width="0.1dp"
+            android:layout_height="20dp"
+            android:background="#66000000" />
+
+        <TextView
+            android:id="@+id/active_atme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="\@我"
+            android:textColor="#13C200" />
+
+        <TextView
+            android:layout_width="0.1dp"
+            android:layout_height="20dp"
+            android:background="#66000000" />
+
+        <TextView
+            android:id="@+id/active_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="评论"
+            android:textColor="#0450D2" />
+        <TextView
+            android:layout_width="0.1dp"
+            android:layout_height="20dp"
+            android:background="#66000000" />
+
+        <TextView
+            android:id="@+id/active_myself"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="我自己"
+            android:textColor="#0450D2" />
+        <TextView
+            android:layout_width="0.1dp"
+            android:layout_height="20dp"
+            android:background="#66000000" />
+
+        <TextView
+            android:id="@+id/active_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="留言"
+            android:textColor="#0450D2" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/tab"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:scaleType="matrix"
+        android:src="@drawable/tab_bottom_holo" />
+	<TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="#66000000" />
+    <android.support.v4.view.ViewPager
+        android:id="@+id/active_main_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center" >
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

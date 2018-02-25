@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/software_detail_scrollview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fadingEdge="none"
+    android:scrollbars="vertical" >
+
+    <LinearLayout
+        android:id="@+id/software_detail_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6.0dip"
+            android:layout_marginRight="6.0dip"
+            android:layout_marginTop="8.0dip"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/software_detail_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical" />
+
+            <TextView
+                android:id="@+id/software_detail_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="3.0dip"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_18"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View style="@style/detail_cut_line" />
+
+        <WebView
+            android:id="@+id/software_detail_webview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6.0dip"
+            android:layout_marginRight="6.0dip"
+            android:layout_marginTop="15.0dip"
+            android:background="@drawable/login_user_table_bg"
+            android:orientation="vertical"
+            android:paddingBottom="10.0dip" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7.0dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8.0dip"
+                    android:text="授权协议："
+                    android:textColor="#ff000000"
+                    android:textSize="@dimen/text_size_15"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/software_detail_license"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8.0dip"
+                    android:textColor="#ff000000"
+                    android:textSize="@dimen/text_size_15" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/software_detail_language_iv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2.0dip"
+                android:layout_marginRight="2.0dip"
+                android:layout_marginTop="5.0dip"
+                android:scaleType="fitXY"
+                android:src="@drawable/login_line" />
+
+            <LinearLayout
+                android:id="@+id/software_detail_language_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7.0dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8.0dip"
+                    android:text="开发语言："
+                    android:textColor="#ff000000"
+                    android:textSize="@dimen/text_size_15"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/software_detail_language"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8.0dip"
+                    android:textColor="#ff000000"
+                    android:textSize="@dimen/text_size_15" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/software_detail_os_iv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2.0dip"
+                android:layout_marginRight="2.0dip"
+                android:layout_marginTop="5.0dip"
+                android:scaleType="fitXY"
+                android:src="@drawable/login_line" />
+
+            <LinearLayout
+                android:id="@+id/software_detail_os_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7.0dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8.0dip"
+                    android:text="操作系统："
+                    android:textColor="#ff000000"
+                    android:textSize="@dimen/text_size_15"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/software_detail_os"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8.0dip"
+                    android:textColor="#ff000000"
+                    android:textSize="@dimen/text_size_15" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2.0dip"
+                android:layout_marginRight="2.0dip"
+                android:layout_marginTop="5.0dip"
+                android:scaleType="fitXY"
+                android:src="@drawable/login_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7.0dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8.0dip"
+                    android:text="收录时间："
+                    android:textColor="#ff000000"
+                    android:textSize="@dimen/text_size_15"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/software_detail_recordtime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8.0dip"
+                    android:textColor="#ff000000"
+                    android:textSize="@dimen/text_size_15" />
+            </LinearLayout>
+        </TableLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25.0dip"
+            android:layout_marginLeft="6.0dip"
+            android:layout_marginRight="6.0dip"
+            android:layout_marginTop="15.0dip"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/software_detail_homepage"
+                android:layout_width="88.0dip"
+                android:layout_height="35.0dip"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/login_btn_selector"
+                android:text="软件首页" />
+
+            <Button
+                android:id="@+id/software_detail_download"
+                android:layout_width="88.0dip"
+                android:layout_height="35.0dip"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/login_btn_selector"
+                android:text="软件下载" />
+
+            <Button
+                android:id="@+id/software_detail_document"
+                android:layout_width="88.0dip"
+                android:layout_height="35.0dip"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/login_btn_selector"
+                android:text="软件文档" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

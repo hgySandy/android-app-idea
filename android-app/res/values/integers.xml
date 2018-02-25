@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="footer_anim_time" >700</integer>
+    <integer name="detail_footer_anim_time" >500</integer>
+</resources>

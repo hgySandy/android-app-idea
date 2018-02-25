@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@color/white" >
+    
+    <net.oschina.app.widget.TabButton
+        android:id="@+id/search_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="42.0dip"
+        android:layout_alignParentTop="true" >
+
+    </net.oschina.app.widget.TabButton>
+
+    <RelativeLayout
+        android:id="@+id/search_btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+  		android:layout_alignParentBottom="true"
+        android:background="#262626"
+        android:gravity="center_vertical"
+        android:padding="5dip" >
+
+        <Button
+            android:id="@+id/search_btn"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right|center"
+            android:background="@drawable/ic_action_action_search" />
+
+        <EditText
+            android:id="@+id/search_editer"
+            android:layout_width="match_parent"
+            android:layout_height="39dip"
+            android:layout_gravity="left|center"
+            android:layout_toLeftOf="@id/search_btn"
+            android:hint="输入搜索内容"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:background="@drawable/edittext_holo_dark"
+            android:imeOptions="actionSearch"
+            android:singleLine="true" />
+    </RelativeLayout>
+    
+    <android.support.v4.view.ViewPager
+        android:id="@+id/search_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/search_btn_layout"
+        android:layout_marginTop="35.0dip">
+        
+    </android.support.v4.view.ViewPager>
+</RelativeLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tweet_detail_linearlayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <net.oschina.app.widget.PullToRefreshListView
+        android:id="@+id/tweet_detail_commentlist"
+        android:layout_weight="1"
+        style="@style/widget_listview" />
+
+    <include layout="@layout/tweet_detail_footer" />
+
+</LinearLayout>

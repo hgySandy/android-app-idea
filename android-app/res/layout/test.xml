@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_activity_drawer"
+    android:layout_width="250dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:background="@color/white"
+    android:clickable="true" >
+
+    <ImageView
+        android:id="@+id/user_info_userface"
+        android:layout_width="70dip"
+        android:layout_height="70dip"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/widget_dface_border"
+        android:clickable="true"
+        android:padding="3.0dip"
+        android:scaleType="fitCenter"
+        android:src="@drawable/widget_dface" />
+
+    <TextView
+        android:id="@+id/user_info_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_info_userface"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10.0dip"
+        android:text="zxtegd"
+        android:textColor="@color/author_text"
+        android:textSize="@dimen/text_size_18" />
+
+    <LinearLayout
+        android:id="@+id/watch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_info_username"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/but_actionbar_selector"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="关注"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/watch_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="10" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Favorites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/watch"
+        android:layout_marginRight="20dp"
+        android:layout_toLeftOf="@id/watch"
+        android:background="@drawable/but_actionbar_selector"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="收藏"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/Favorites_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="10" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/watch"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/watch"
+        android:background="@drawable/but_actionbar_selector"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="粉丝"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/fans_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="10" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/drawer_other"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/drawer_other_line" />
+
+        <TextView
+            android:id="@+id/drawer_soft"
+            style="@style/drawer_other_text"
+            android:text="@string/main_menu_software" />
+
+        <TextView
+            style="@style/drawer_other_line" />
+
+        <TextView
+            android:id="@+id/drawer_capture"
+            style="@style/drawer_other_text"
+            android:text="@string/main_menu_capture" />
+
+        <TextView
+            style="@style/drawer_other_line" />
+
+        <TextView
+            android:id="@+id/drawer_setting"
+            style="@style/drawer_other_text"
+            android:text="@string/main_menu_setting" />
+
+        <TextView
+            style="@style/drawer_other_line" />
+
+        <TextView
+            android:id="@+id/drawer_longout"
+            style="@style/drawer_other_text"
+            android:text="@string/main_menu_logout" />
+
+        <TextView
+            style="@style/drawer_other_line" />
+    </LinearLayout>
+
+</RelativeLayout>
