@@ -42,8 +42,10 @@ import net.oschina.app.common.HandlerManager;
 import net.oschina.app.common.StringUtils;
 import net.oschina.app.common.UIHelper;
 import net.oschina.app.fragment.ActiveMainFragment;
+import net.oschina.app.fragment.MainFragment;
 import net.oschina.app.fragment.NewsMainFragment;
 import net.oschina.app.fragment.QuestionMainFragment;
+import net.oschina.app.fragment.SoftwareMainFragment;
 import net.oschina.app.fragment.TweetMainFragment;
 import net.oschina.app.fragment.LoginDialogFragment.LoginDialogListener;
 import net.oschina.app.inteface.ActionBarProgressBarVisibility;
@@ -63,6 +65,8 @@ public class MainActivity extends BaseActionBarActivity implements
 	private RadioButton fbNews;
 	private RadioButton fbQuestion;
 	private RadioButton fbTweet;
+	/*----------- 添加软件 -----------*/
+	private RadioButton fbSoftware;
 	private RadioButton fbactive;
 
 	protected void onCreate(Bundle savedInstanceState) {
@@ -129,6 +133,8 @@ public class MainActivity extends BaseActionBarActivity implements
 		fbNews = (RadioButton) findViewById(R.id.main_footbar_news);
 		fbQuestion = (RadioButton) findViewById(R.id.main_footbar_question);
 		fbTweet = (RadioButton) findViewById(R.id.main_footbar_tweet);
+		/*----------- 添加软件 -----------*/
+		fbSoftware = (RadioButton) findViewById(R.id.main_footbar_software);
 		fbactive = (RadioButton) findViewById(R.id.main_footbar_user);
 
 		fbNews.setChecked(true);
@@ -136,6 +142,8 @@ public class MainActivity extends BaseActionBarActivity implements
 		fbNews.setOnClickListener(onClickListener);
 		fbQuestion.setOnClickListener(onClickListener);
 		fbTweet.setOnClickListener(onClickListener);
+		/*----------- 添加软件 -----------*/
+		fbSoftware.setOnClickListener(onClickListener);
 		fbactive.setOnClickListener(onClickListener);
 
 		BadgeManager bManager = BadgeManager.getInstance();
@@ -231,29 +239,36 @@ public class MainActivity extends BaseActionBarActivity implements
 			FragmentManager fManager = getSupportFragmentManager();
 			FragmentTransaction fTransaction = fManager.beginTransaction();
 			switch (v.getId()) {
-			case R.id.main_footbar_news:
-				fbNews.setChecked(true);
-				fTransaction.replace(R.id.main_activity_linearlayout,
-						new NewsMainFragment()).commit();
-				break;
-			case R.id.main_footbar_question:
-				fbQuestion.setChecked(true);
-				fTransaction.replace(R.id.main_activity_linearlayout,
-						new QuestionMainFragment()).commit();
-				break;
-			case R.id.main_footbar_tweet:
-				fbTweet.setChecked(true);
-				fTransaction.replace(R.id.main_activity_linearlayout,
-						new TweetMainFragment()).commit();
-				break;
-			case R.id.main_footbar_user:
-				fbactive.setChecked(true);
-				fTransaction.replace(R.id.main_activity_linearlayout,
-						new ActiveMainFragment()).commit();
-				break;
+				case R.id.main_footbar_news:
+					fbNews.setChecked(true);
+					fTransaction.replace(R.id.main_activity_linearlayout,
+							new NewsMainFragment()).commit();
+					break;
+				case R.id.main_footbar_question:
+					fbQuestion.setChecked(true);
+					fTransaction.replace(R.id.main_activity_linearlayout,
+							new QuestionMainFragment()).commit();
+					break;
+				case R.id.main_footbar_tweet:
+					fbTweet.setChecked(true);
+					fTransaction.replace(R.id.main_activity_linearlayout,
+							new TweetMainFragment()).commit();
+					break;
+					/*----------- 添加软件 -----------*/
+				case R.id.main_footbar_software:
+					fbSoftware.setChecked(true);
+					//UIHelper.showSoftware(MainActivity.this);
+					fTransaction.replace(R.id.main_activity_linearlayout,
+							new SoftwareMainFragment()).commit();
+					break;
+				case R.id.main_footbar_user:
+					fbactive.setChecked(true);
+					fTransaction.replace(R.id.main_activity_linearlayout,
+							new ActiveMainFragment()).commit();
+					break;
 
-			default:
-				break;
+				default:
+					break;
 			}
 		}
 	};
@@ -298,6 +313,7 @@ public class MainActivity extends BaseActionBarActivity implements
 		fbQuestion.setChecked(false);
 		fbTweet.setChecked(false);
 		fbactive.setChecked(false);
+		fbSoftware.setChecked(false);
 	}
 
 	@Override

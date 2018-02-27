@@ -20,6 +20,7 @@ import android.util.Xml;
  */
 public class Software extends Entity {
 
+	private String indent;
 	private String title;
 	private String extensionTitle;
 	private String license;
@@ -32,7 +33,15 @@ public class Software extends Entity {
 	private String os;
 	private String recordtime;
 	private int favorite;
-	
+
+	public String getIndent() {
+		return indent;
+	}
+
+	public void setIndent(String indent) {
+		this.indent = indent;
+	}
+
 	public int getFavorite() {
 		return favorite;
 	}

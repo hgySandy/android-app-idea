@@ -27,7 +27,13 @@ public class SoftwareList extends Entity{
 	public final static String TAG_LASTEST = "time";//最新
 	public final static String TAG_HOT = "view";//热门
 	public final static String TAG_CHINA = "list_cn";//国产
-	
+
+	public final static int HEAD_TAG_RECOMMEND = 0x002;
+	public final static int HEAD_TAG_LASTEST = 0x003;
+	public final static int HEAD_TAG_HOT = 0x004;
+	public final static int HEAD_TAG_CHINA = 0x005;
+
+
 	private int softwarecount;
 	private int pagesize;
 	private List<Software> softwarelist = new ArrayList<Software>();

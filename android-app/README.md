@@ -1,18 +1,19 @@
 android-app
 ===========
 
-# **开源中国社区 Android Design客户端项目简析** #
+# **Android Design客户端项目简析** #
 
-根据OSChina的android开源代码修改而来的。适用于Android手机使用。
+本项目是在开源项目 Android Design客户端 [OSChina的android开源代码](https://gitee.com/tar/android-app)  的android-design分支基础上修改而来,已将项目gradle化
+(由Eclipse迁移到了Android Studio),适用于Android手机使用。
+
 依赖的项目：
 android-support-v4，使低版本的Android支持Fragment。
 android-support-v7，使低版本的Android支持ActionBar。
 android-support-v4-preferencefragment，使低版本的Android支持PreferenceFragment。
 
-与原项目的变化：
-删除Main.java类，用MainActivity.java来代替，MainActivity来管理其它的MainFragment。
+MainActivity管理其它的MainFragment。
 
-Mian.java中的功能分别由以下文件代替:
+核心功能分别由以下文件处理:
 
 > ——————————————————————————————————NewMainFragment              三个页面
 						  			     |
@@ -54,11 +55,8 @@ BadgeView的状态和页面数据分离到BadgeManager.java和HandlerManager.jav
 
 *注：本文假设你已经有Android开发环境*
 
-启动Eclipse，点击菜单并导入Android客户端项目，请确保你当前的Android SDK是最新版。<br>
-如果编译出错，请修改项目根目录下的 project.properties 文件。<br>
-推荐使用Android 4.0 以上版本的SDK,请使用JDK1.6编译：
+Android Studio，点击菜单并导入Android客户端项目，请确保你当前的Android SDK是最新版。<br>
 
-> target=android-15
 
 **本项目采用 GPL 授权协议，欢迎大家在这个基础上进行改进，并与大家分享。**
 
@@ -72,7 +70,8 @@ BadgeView的状态和页面数据分离到BadgeManager.java和HandlerManager.jav
 > ├ AndroidManifest.xml<br>
 > ├ LICENSE.txt<br>
 > ├ proguard.cfg<br>
-> └ project.properties<br>
+> └ build.gradle<br>
+
 
 **1、src目录**<br>
 src目录用于存放项目的包及java源码文件。

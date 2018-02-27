@@ -2,9 +2,11 @@ package net.oschina.app.bean;
 
 import java.util.ArrayList;
 import java.util.List;
+import net.oschina.app.bean.SoftwareList.Software;
 
 public class ListData {
 	private List<News> newsData = new ArrayList<News>();
+	private List<Software> softwareData = new ArrayList<Software>();
 	private List<Blog> blogData = new ArrayList<Blog>();
 	private List<Post> questionData = new ArrayList<Post>();
 	private List<Tweet> tweetData = new ArrayList<Tweet>();
@@ -13,6 +15,7 @@ public class ListData {
 	private List<SearchList.Result> searchData = new ArrayList<SearchList.Result>();
 	
 	private int newsSumData;
+	private int softwareSumData;
 	private int blogSumData;
 	private int questionSumData;
 	private int tweetSumData;
@@ -23,7 +26,39 @@ public class ListData {
 	public ListData(){
 		
 	}
-	
+
+	public List<Software> getSoftwareData() {
+		return softwareData;
+	}
+
+	public int getSoftwareDataSize(){
+		return softwareData.size();
+	}
+
+	public void addSoftwareData(Software software){
+		this.softwareData.add(software);
+	}
+
+	public void addAllSoftwareData(List<Software> softwareData){
+		this.softwareData.addAll(softwareData);
+	}
+
+	public void setSoftwareData(List<Software> softwareData) {
+		this.softwareData = softwareData;
+	}
+
+	public int getSoftwareSumData() {
+		return softwareSumData;
+	}
+
+	public void setSoftwareSumData(int softwareSumData) {
+		this.softwareSumData = softwareSumData;
+	}
+
+	public void addSoftwareSumData(int softwareSumData){
+		this.softwareSumData += softwareSumData;
+	}
+
 	public int getNewsSumData() {
 		return newsSumData;
 	}

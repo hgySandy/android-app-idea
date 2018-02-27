@@ -43,6 +43,12 @@
                 android:text="@string/main_footer_tweet" />
 
             <RadioButton
+                    android:id="@+id/main_footbar_software"
+                    style="@style/main_footbar_button"
+                    android:drawableTop="@drawable/ic_button_software"
+                    android:text="@string/main_footer_software" android:layout_height="match_parent"/>
+
+            <RadioButton
                 android:id="@+id/main_footbar_user"
                 style="@style/main_footbar_button"
                 android:drawableTop="@drawable/widget_bar_active"
