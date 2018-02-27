@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 
 public abstract class MainFragment extends Fragment {
 	private ViewPager viewPager;
+	public final static String CATLOG = "CATLOG";
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.fragment_main, container, false);
 		viewPager = (ViewPager) view.findViewById(R.id.fragment_main_viewpager);
@@ -27,7 +28,7 @@ public abstract class MainFragment extends Fragment {
 	
 	protected Fragment addBundle(Fragment fragment, int catlog){
 		Bundle bundle = new Bundle();
-		bundle.putInt(NewsList.CATLOG, catlog);
+		bundle.putInt(MainFragment.CATLOG, catlog);
 		fragment.setArguments(bundle);
 		return fragment;
 	}

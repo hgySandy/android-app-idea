@@ -7,23 +7,7 @@ import java.util.List;
 import net.oschina.app.AppContext;
 import net.oschina.app.AppException;
 import net.oschina.app.adapter.ListViewSearchAdapter;
-import net.oschina.app.bean.Active;
-import net.oschina.app.bean.ActiveList;
-import net.oschina.app.bean.Blog;
-import net.oschina.app.bean.BlogList;
-import net.oschina.app.bean.Entity;
-import net.oschina.app.bean.ListData;
-import net.oschina.app.bean.MessageList;
-import net.oschina.app.bean.Messages;
-import net.oschina.app.bean.News;
-import net.oschina.app.bean.NewsList;
-import net.oschina.app.bean.Notice;
-import net.oschina.app.bean.Post;
-import net.oschina.app.bean.PostList;
-import net.oschina.app.bean.Result;
-import net.oschina.app.bean.SearchList;
-import net.oschina.app.bean.Tweet;
-import net.oschina.app.bean.TweetList;
+import net.oschina.app.bean.*;
 import net.oschina.app.inteface.ActionBarProgressBarVisibility;
 import net.oschina.app.widget.NewDataToast;
 import net.oschina.app.widget.PullToRefreshListView;
@@ -364,6 +348,31 @@ public class HandlerManager {
 				}
 				data.setMsgData(mlist.getMessagelist());
 				break;
+				//增加软件
+			case UIHelper.LISTVIEW_DATATYPE_SOFTWARE:
+					SoftwareList slist = (SoftwareList) obj;
+					notice = slist.getNotice();
+					List<SoftwareList.Software> oldSoftwareData = (List<SoftwareList.Software>) callbacks.getListData();
+					data.setSoftwareSumData(what);
+					if (actiontype == UIHelper.LISTVIEW_ACTION_REFRESH) {
+						if (oldSoftwareData.size() > 0) {
+							for (SoftwareList.Software software : slist.getSoftwarelist()) {
+								boolean b = false;
+								for (SoftwareList.Software software2 : oldSoftwareData) {
+									if (software.url.equals(software2.url)) {
+										b = true;
+										break;
+									}
+								}
+								if (!b)
+									newdata++;
+							}
+						} else {
+							newdata = what;
+						}
+					}
+					data.setSoftwareData(slist.getSoftwarelist());
+					break;
 			}
 			if (actiontype == UIHelper.LISTVIEW_ACTION_REFRESH) {
 				// 提示新加载数据
@@ -374,6 +383,7 @@ public class HandlerManager {
 				}
 			}
 			break;
+
 		case UIHelper.LISTVIEW_ACTION_SCROLL:
 			switch (objtype) {
 			case UIHelper.LISTVIEW_DATATYPE_NEWS:
@@ -496,6 +506,28 @@ public class HandlerManager {
 					data.addAllMsgData(mlist.getMessagelist());
 				}
 				break;
+
+
+			case UIHelper.LISTVIEW_DATATYPE_SOFTWARE:
+					SoftwareList slist = (SoftwareList) obj;
+					notice = slist.getNotice();
+					data.addSoftwareSumData(what);
+					if (data.getSoftwareDataSize() > 0) {
+						for (SoftwareList.Software software1 : slist.getSoftwarelist()) {
+							boolean b = false;
+							for (SoftwareList.Software software2 : data.getSoftwareData()) {
+								if (software1.url.equals(software2.url)) {
+									b = true;
+									break;
+								}
+							}
+							if (!b)
+								data.addSoftwareData(software1);
+						}
+					} else {
+						data.addAllSoftwareData(slist.getSoftwarelist());
+					}
+					break;
 			}
 			break;
 		}
